@@ -4,54 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
+    <!-- Link to external stylesheet inside css/ folder -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header>
         <h1>My Project</h1>
+        <!-- Dynamic Effect 1: Greeting & Live Clock -->
+        <p id="time-greeting">Loading time...</p>
+        
+        <div class="controls">
+            <!-- Dynamic Effect 2: Dark/Light Mode Toggle -->
+            <button id="theme-toggle-btn">Toggle Dark Mode</button>
+            <!-- Dynamic Effect 3: Live Project Counter -->
+            <span id="project-counter">Projects Loaded: 0</span>
+        </div>
     </header>
 
     <main class="container">
         <div class="project-grid">
             <!-- Block 1 -->
-            <a href="#" class="project-card">
-                <img src="https://via.placeholder.com/200x150?text=Demo+1" alt="Javascript Demo">
+            <a href="#" class="project-card" data-title="Javascript Demo" data-desc="Interactive JS feature demo showcase.">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150'><rect width='100%' height='100%' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='16' fill='%23334155' dominant-baseline='middle' text-anchor='middle'>Demo 1</text></svg>" alt="Javascript Demo">
                 <span class="project-title">Javascript Demo</span>
             </a>
 
             <!-- Block 2 -->
-            <a href="#" class="project-card">
-                <img src="https://via.placeholder.com/200x150?text=Project+2" alt="Project 2">
+            <a href="#" class="project-card" data-title="Project2" data-desc="Upcoming CSCI 310 assignment demo.">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150'><rect width='100%' height='100%' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='16' fill='%23334155' dominant-baseline='middle' text-anchor='middle'>Project 2</text></svg>" alt="Project2">
                 <span class="project-title">Project2</span>
             </a>
 
             <!-- Block 3 -->
-            <a href="#" class="project-card">
-                <img src="https://via.placeholder.com/200x150?text=Project+3" alt="Project 3">
+            <a href="#" class="project-card" data-title="Project3" data-desc="Web 3D & VR feature demonstration.">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150'><rect width='100%' height='100%' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='16' fill='%23334155' dominant-baseline='middle' text-anchor='middle'>Project 3</text></svg>" alt="Project3">
                 <span class="project-title">Project3</span>
             </a>
 
             <!-- Block 4 -->
-            <a href="#" class="project-card">
-                <img src="https://via.placeholder.com/200x150?text=Project+4" alt="Project 4">
+            <a href="#" class="project-card" data-title="Project4" data-desc="Full-stack web integration sample.">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150'><rect width='100%' height='100%' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='16' fill='%23334155' dominant-baseline='middle' text-anchor='middle'>Project 4</text></svg>" alt="Project4">
                 <span class="project-title">Project4</span>
             </a>
 
             <!-- Block 5 -->
-            <a href="#" class="project-card">
-                <img src="https://via.placeholder.com/200x150?text=Project+5" alt="Project 5">
+            <a href="#" class="project-card" data-title="Project5" data-desc="Game AI & logic interactive web application.">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150'><rect width='100%' height='100%' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='16' fill='%23334155' dominant-baseline='middle' text-anchor='middle'>Project 5</text></svg>" alt="Project5">
                 <span class="project-title">Project5</span>
             </a>
 
             <!-- Block 6 -->
-            <a href="#" class="project-card">
-                <img src="https://via.placeholder.com/200x150?text=Project+6" alt="Project 6">
+            <a href="#" class="project-card" data-title="Project6" data-desc="Final Capstone research project showcase.">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='150'><rect width='100%' height='100%' fill='%23cbd5e1'/><text x='50%' y='50%' font-family='Arial' font-size='16' fill='%23334155' dominant-baseline='middle' text-anchor='middle'>Project 6</text></svg>" alt="Project6">
                 <span class="project-title">Project6</span>
             </a>
         </div>
     </main>
 
+    <!-- Dynamic Effect 5: Interactive Popup Modal -->
+    <div id="project-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal-btn">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            <p id="modal-desc">Project details will show here.</p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript inside js/ folder -->
     <script src="js/script.js"></script>
 </body>
 </html>
