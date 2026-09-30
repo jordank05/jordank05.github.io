@@ -90,12 +90,13 @@ body.dark-theme #project-counter {
 }
 
 /* ===================================================
-   DESKTOP LAYOUT (720px Width)
+   DESKTOP LAYOUT (720px Container Width)
    =================================================== */
 .container {
     width: 720px;
+    box-sizing: border-box;
     background-color: #ffffff;
-    padding: 25px 40px; /* 25px top/bottom, 40px side margins */
+    padding: 25px 40px; /* 25px top/bottom, 40px left/right */
     border: 1px dashed #cbd5e1;
     border-radius: 8px;
 }
@@ -103,7 +104,7 @@ body.dark-theme #project-counter {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns x 2 rows */
-    gap: 20px; /* 20px gap */
+    gap: 25px 20px; /* 25px row gap, 20px column gap */
 }
 
 .project-card {
@@ -114,23 +115,27 @@ body.dark-theme #project-counter {
     color: #1e293b;
     background-color: #f8fafc;
     border: 1px solid #cbd5e1;
-    padding: 10px;
+    padding: 0; /* Set to 0 so cards fit inner container exactly */
     border-radius: 4px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden; /* Keeps image and title contained */
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     cursor: pointer;
 }
 
 /* Desktop Images: 200px x 150px */
 .project-card img {
-    width: 200px;
+    width: 100%;
     height: 150px;
     object-fit: cover;
+    display: block;
 }
 
 .project-title {
-    margin-top: 8px;
+    padding: 10px;
     font-size: 14px;
     font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* ===================================================
@@ -139,7 +144,7 @@ body.dark-theme #project-counter {
 @media only screen and (max-width: 600px) {
     .container {
         width: 300px; /* Centered 300px container width */
-        padding: 10px; /* 10px top padding */
+        padding: 10px 25px; /* 10px top/bottom, 25px left/right */
     }
 
     .project-grid {
@@ -149,11 +154,12 @@ body.dark-theme #project-counter {
 
     /* Mobile Images: 120px x 90px */
     .project-card img {
-        width: 120px;
+        width: 100%;
         height: 90px;
     }
 
     .project-title {
+        padding: 6px;
         font-size: 12px;
     }
 }
